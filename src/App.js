@@ -56,6 +56,16 @@ const App = () => {
           />
         )}
       </div>
+      <div className="app">
+        <ImageItem images={images} handleOpenModal={handleOpenModal} />
+        {openModal && (
+          <Modal
+            image={image}
+            setOpenModal={setOpenModal}
+            handleSendComment={handleSendComment}
+          />
+        )}
+      </div>
     </>
   );
 };
